@@ -17,6 +17,12 @@ dist/MusicLibraryLens.app
 If this repo is opened in Codex desktop, the tracked `.codex` environment file
 should expose a `Run` action that calls the same script automatically.
 
+## Requirements
+
+- macOS 13 or later
+- Xcode installed on the target Mac
+- Xcode Command Line Tools selected for the active developer directory
+
 ## Package To Send
 
 ```bash
@@ -37,8 +43,9 @@ Use `./script/package_for_sharing.sh --trial` for a faster debug-signed build wh
 
 1. Clone the repository into Codex on the target Mac.
 2. Open the repo folder in Codex.
-3. Use the `Run` action, or ask Codex to run `./script/build_and_run.sh`.
-4. Choose the actual top-level music library folder when the app opens.
+3. If needed, ask Codex to run `xcode-select -p` first and confirm the Xcode toolchain is available.
+4. Use the `Run` action, or ask Codex to run `./script/build_and_run.sh`.
+5. Choose the actual top-level music library folder when the app opens.
 
 ## Notes
 
